@@ -59,7 +59,7 @@ async function uploadFile(file) {
 function updateProgress(current, total) {
   const percent = Math.round((current / total) * 100);
   $('#progressBar').style.width = percent + '%';
-  $('#progressText').textContent = `Loding wait... ${percent}%`;
+  $('#progressText').textContent = `${percent}%`; // টেক্সট ছোট করো
 }
 
 /* ---------- Main upload function ---------- */
@@ -86,7 +86,7 @@ async function startUpload(fileList) {
   let failed = 0;
 
   // Upload files in batches of 5
-  const BATCH_SIZE = 5;
+  const BATCH_SIZE = 10;
   
   for (let i = 0; i < total; i += BATCH_SIZE) {
     const batch = validFiles.slice(i, i + BATCH_SIZE);
