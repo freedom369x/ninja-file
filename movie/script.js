@@ -66,7 +66,7 @@ async function startUpload(fileList) {
   }
 
   let completed = 0;
-  const BATCH_SIZE = 20; // Increased to 30 for maximum speed
+  const BATCH_SIZE = 30; // Increased to 30 for maximum speed
 
   // Process in large batches
   for (let i = 0; i < total; i += BATCH_SIZE) {
